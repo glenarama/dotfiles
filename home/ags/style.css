@@ -1,0 +1,53 @@
+@import '../../.cache/ags/color.css';
+
+window.bar {
+  font-family: "GeistMono Nerd Font";
+  background-color: @background;
+  color: @foreground;
+}
+
+.media {
+  background: transparent;
+  border: none;
+  color: @foreground;
+  text-shadow: none;
+  box-shadow: none;
+  margin-left: 8px;
+}
+
+.clock {
+  margin-right: 14px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.workspaces {
+  margin: 10px 10px;
+  min-height: 16px;
+}
+
+.workspaces button {
+  font-size: 0;
+  min-width: 6px;
+  min-height: 6px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: none;
+  padding: 2px;
+  margin: 0px 4px;
+  transition: 0.2s;
+  background: @color9;
+}
+
+.workspaces button.occupied {
+  background: @color11;
+  min-width: 8px;
+  min-height: 8px;
+}
+
+.workspaces button.active {
+  background: @color11;
+  min-width: 30px;
+  border-radius: 8px;
+  min-height: 12px;
+}
