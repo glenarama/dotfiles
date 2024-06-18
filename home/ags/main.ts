@@ -4,7 +4,7 @@ const mpris = await Service.import("mpris");
 const audio = await Service.import("audio");
 
 const date = Variable("", {
-  poll: [1000, 'date "+%a, %b %e - %H:%M"'],
+  poll: [1000, 'date "+%a, %e. %b | %k:%M"'],
 });
 
 const Workspaces = () =>
@@ -68,7 +68,7 @@ function Volume() {
     }
 
     const icon = Widget.Icon({
-        css: 'margin-right: 5px',
+        css: 'margin-left: 5px',
         icon: Utils.watch(getIcon(), audio.speaker, getIcon),
     })
 
@@ -80,16 +80,9 @@ function Volume() {
         onScrollDown: ()=> audio.speaker.volume=audio.speaker.volume - 0.05,
         onPrimaryClick: ()=> audio.speaker.is_muted = !audio.speaker.is_muted,
         child: Widget.Box({
-          children: [icon, Widget.Label({ label, css: audio.speaker.bind("is_muted").as(m=> m ? "opacity: 0.3" : "opacity: 1")})],
+          children: [Widget.Label({ label, css: audio.speaker.bind("is_muted").as(m=> m ? "opacity: 0.3" : "opacity: 1")}), icon],
         })
     })
-}
-
-function ClientTitle() {
-  return Widget.Label({
-    class_name: "client-title",
-    label: hyprland.active.client.bind("title"),
-  });
 }
 
 function Clock() {
