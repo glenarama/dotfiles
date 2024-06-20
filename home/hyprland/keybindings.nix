@@ -25,7 +25,7 @@
       "$mod SHIFT, T, exec, hyprctl dispatch workspaceopt allfloat"
       "$mod, W, exec, waypaper"
       "$mod, SPACE, exec, ulauncher --no-window-shadow"
-      "$mod, Escape, exec, wlogout"
+      "$mod, Escape, exec, wlogout -b 2"
 
       # Window Management
       "$mod, 1, workspace, 1"
