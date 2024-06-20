@@ -10,25 +10,29 @@
       resize_on_border = true
       gaps_in = 6
       gaps_out = 10
-      border_size = 1
+      border_size = 2
       col.active_border = $color1
       col.inactive_border = $color8
     }
 
+    dwindle {
+      split_width_multiplier = 1.5
+    }
 
     master {
         new_is_master = true
+        allow_small_split = true
         special_scale_factor = 1
         mfact = 0.5
         orientation = left
     }
 
     decoration {
-        rounding = 8
+        rounding = 10
         blur {
             enabled = true
-            size = 9
-            passes = 2
+            size = 6
+            passes = 3
             new_optimizations = on
             ignore_opacity = true
             xray = true
@@ -67,6 +71,10 @@
 
   gtk = {
     enable = true;
+    theme = {
+        name = "WhiteSur-Dark";
+        package = pkgs.whitesur-gtk-theme;
+    };
 
     iconTheme = {
       name 		= "WhiteSur";
@@ -76,6 +84,16 @@
     cursorTheme = {
       name = "Bibata-Modern-Ice";
       package = pkgs.bibata-cursors;
+    };
+    gtk3.extraConfig = {
+        Settings = ''
+          gtk-application-prefer-dark-theme=1
+        '';
+    };
+    gtk4.extraConfig = {
+        Settings = ''
+        gtk-application-prefer-dark-theme=1
+        '';
     };
   };
 }

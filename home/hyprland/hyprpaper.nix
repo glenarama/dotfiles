@@ -5,10 +5,10 @@
         ipc = "on";
         splash = false;
         preload = "$HOME/.cache/used_wallpaper";
-        wallpaper = ",$HOME/.cache/used_wallpaper"; 
+        wallpaper = ",$HOME/.cache/used_wallpaper";
       };
     };
     wayland.windowManager.hyprland.extraConfig = ''
-      exec-once=hyprpaper &
+      exec-once=waypaper --restore
     '';
 }

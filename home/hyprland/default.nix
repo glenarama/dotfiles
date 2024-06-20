@@ -12,6 +12,8 @@
 
   home.packages = with pkgs; [
     hyprpaper
+    waypaper
+    swww
     hypridle
     ulauncher
     rofi
@@ -23,9 +25,8 @@
     ./decoration.nix
     ./hyprlock.nix
     ./hypridle.nix
-    ./wlogout.nix
+    ./wlogout
     ./wallust
   ];
 
 }
-

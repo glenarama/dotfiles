@@ -11,7 +11,7 @@
       ./nvidia.nix
     ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -83,6 +83,7 @@
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
+  services.gvfs.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -120,6 +121,6 @@
     automatic = true;
     dates = "weekly";
     options = "--delete-older-than 7d";
-  }; 
+  };
 
 }

@@ -6,19 +6,24 @@
       "kb_options" = "caps:super";
     };
 
+    windowrule = [
+      "float,^(waypaper)$"
+    ];
+
     bindm = [
-      "$mod, mouse:272, movewindow"
       "$mod, mouse:273, resizewindow"
+      "$mod, mouse:272, movewindow"
     ];
     bind = [
       "$mod, RETURN, exec, alacritty"
       "$mod, K, exec, kitty"
       "$mod, Q, killactive"
-      "$mod, B, exec, firefox"
-      "$mod, E, exec, nautilus"
+      "$mod, B, exec, chromium-browser"
+      "$mod, E, exec, nemo"
       "$mod, F, fullscreen"
       "$mod, T, togglefloating"
-      "$mod, W, exec, $HOME/.dotfiles/home/hyprland/wallpaper.sh select"
+      "$mod SHIFT, T, exec, hyprctl dispatch workspaceopt allfloat"
+      "$mod, W, exec, waypaper"
       "$mod, SPACE, exec, ulauncher --no-window-shadow"
       "$mod, Escape, exec, wlogout"
 

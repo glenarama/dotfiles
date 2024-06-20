@@ -9,18 +9,27 @@
   home.packages = with pkgs; [
     bun
     firefox
+    chromium
     nerdfonts
     killall
-    gnome.nautilus
+    cinnamon.nemo
     lm_sensors
     imagemagick
     neofetch
-    matugen
+    glib
     zed-editor
+    gifski
   ];
 
+  nixpkgs.config = {
+     chromium = {
+       enableWideVine = true;
+      };
+  };
+
   programs.home-manager.enable = true;
-  
+  programs.mpv.enable = true;
+
   imports = [
     ./hyprland
     ./ags
