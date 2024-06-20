@@ -44,7 +44,7 @@
         }
 
         button {
-            background-color: @color13;
+            background-color: @color8;
             outline-style: none;
             border: none;
             border-width: 0px;
@@ -63,7 +63,7 @@
         }
 
         button:hover {
-            background-color: @color2;
+            background-color: @color11;
             background-size: 25%;
             animation: gradient_f 20s ease-in infinite;
             transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
@@ -90,32 +90,32 @@
         }
 
         #lock {
-            background-image: image(url("./icons/lock_black.png"), url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+            background-image: image(url("./icons/lock.png"), url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
             border-radius: 70px 0px 0px 0px;
             margin : 300px 0px 0px 1200px;
         }
 
         #logout {
-            background-image: image(url("./icons/logout_white.png"), url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+            background-image: image(url("./icons/logout.png"), url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
             border-radius: 0px 0px 0px 70px;
             margin : 0px 0px 300px 1200px;
         }
 
         #shutdown {
-            background-image: image(url("./icons/shutdown_white.png"), url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+            background-image: image(url("./icons/shutdown.png"), url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
             border-radius: 0px 70px 0px 0px;
             margin : 300px 1200px 0px 0px;
         }
 
         #reboot {
-            background-image: image(url("./icons/reboot_white.png"), url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+            background-image: image(url("./icons/reboot.png"), url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
             border-radius: 0px 0px 70px 0px;
             margin : 0px 1200px 300px 0px;
         }
     '';
     };
-    home.file.".config/wlogout/icons/lock_black.png".source = ./lock_black.png;
-    home.file.".config/wlogout/icons/logout_white.png".source = ./logout_white.png;
-    home.file.".config/wlogout/icons/reboot_white.png".source = ./reboot_white.png;
-    home.file.".config/wlogout/icons/shutdown_white.png".source = ./shutdown_white.png;
+    home.file.".config/wlogout/icons/lock.png".source = ./lock_black.png;
+    home.file.".config/wlogout/icons/logout.png".source = ./logout_black.png;
+    home.file.".config/wlogout/icons/reboot.png".source = ./reboot_black.png;
+    home.file.".config/wlogout/icons/shutdown.png".source = ./shutdown_black.png;
 }
