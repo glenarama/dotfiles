@@ -11,8 +11,8 @@
     ags.url = "github:Aylur/ags";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: 
-    let 
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+    let
       system = "x86_64-linux";
     in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
