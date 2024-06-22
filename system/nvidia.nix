@@ -2,12 +2,10 @@
 {
 
   # Enable OpenGL
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-  };
-
+  hardware.graphics = {
+    enable32Bit = true;
+    opengle.enable = true;
+ }
  environment.variables = {
     "LIBVA_DRIVER_NAME"="nvidia";
     "GBM_BACKEND"="nvidia-drm";
