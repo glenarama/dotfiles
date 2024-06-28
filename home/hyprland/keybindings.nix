@@ -22,6 +22,8 @@
       "$mod, E, exec, nemo"
       "$mod, F, fullscreen"
       "$mod, T, togglefloating"
+      "$mod, G, togglegroup"
+      "$mod, ], changegroupactive"
       "$mod SHIFT, T, exec, hyprctl dispatch workspaceopt allfloat"
       "$mod, W, exec, waypaper"
       "$mod, SPACE, exec, ulauncher --no-window-shadow"

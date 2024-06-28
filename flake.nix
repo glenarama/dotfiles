@@ -9,14 +9,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     ags.url = "github:Aylur/ags";
-    hyprland.url = "github:hyprwm/Hyprland";
-    hy3 = {
-      url = "github:outfoxxed/hy3";
-      inputs.hyprland.follows = "hyprland";
-    };
   };
 
-  outputs = { self, nixpkgs, home-manager, hyprland, hy3, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
     in {
@@ -27,16 +22,7 @@
     homeConfigurations.glen = home-manager.lib.homeManagerConfiguration {
       pkgs = import nixpkgs { inherit system; };
       extraSpecialArgs = { inherit inputs; };
-      modules = [
-        ./home/home.nix
-        hyprland.homeManagerModules.default
-        {
-          wayland.windowManager.hyprland  = {
-            enable = true;
-            plugins = [ hy3.packages.x86_64-linux.hy3 ];
-          };
-        }
-      ];
+      modules = [ ./home/home.nix ];
     };
   };
 }

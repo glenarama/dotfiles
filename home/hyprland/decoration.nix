@@ -60,6 +60,18 @@
         animation = fade, 1, 7, default
         animation = workspaces, 1, 6, default, slidefade 20%
     }
+
+    group {
+      col.border_active = $color1
+      col.border_inactive = $color8
+      groupbar {
+        font_family = "GeistMono Nerd Font"
+        font_size = 11
+        height = 20
+        col.active = $color1
+        col.inactive = $color8
+      }
+    }
 '';
 
   home.pointerCursor = {
