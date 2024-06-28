@@ -10,6 +10,7 @@
     bun
     firefox
     chromium
+    google-chrome
     nerdfonts
     killall
     cinnamon.nemo

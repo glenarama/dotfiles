@@ -4,7 +4,7 @@ const mpris = await Service.import("mpris");
 const audio = await Service.import("audio");
 
 const date = Variable("", {
-  poll: [1000, 'date "+%a, %e. %b | %k:%M"'],
+  poll: [1000, 'date "+%a %b %e | %k:%M"'],
 });
 
 const Workspaces = () =>

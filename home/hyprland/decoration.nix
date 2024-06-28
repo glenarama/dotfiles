@@ -6,7 +6,7 @@
     source = ./colors.conf
 
     general {
-      layout = master
+      layout = hy3
       resize_on_border = true
       gaps_in = 6
       gaps_out = 10
@@ -77,8 +77,8 @@
     };
 
     iconTheme = {
-      name 		= "WhiteSur";
-      package 		= pkgs.whitesur-icon-theme;
+      name = "WhiteSur";
+      package = pkgs.whitesur-icon-theme;
     };
 
     cursorTheme = {
@@ -86,14 +86,10 @@
       package = pkgs.bibata-cursors;
     };
     gtk3.extraConfig = {
-        Settings = ''
-          gtk-application-prefer-dark-theme=1
-        '';
+        gtk-application-prefer-dark-theme=1;
     };
     gtk4.extraConfig = {
-        Settings = ''
-        gtk-application-prefer-dark-theme=1
-        '';
+        gtk-application-prefer-dark-theme=1;
     };
   };
 }

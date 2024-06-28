@@ -98,6 +98,7 @@
    vim
    home-manager
    ntfs3g
+   pwvucontrol
    zsh
    xdg-utils
    bun
@@ -112,7 +113,7 @@
     xwayland.enable = true;
   };
   hardware = {
-    opengl.enable = true;
+    graphics.enable = true;
     nvidia.modesetting.enable = true;
   };
   system.stateVersion = "24.05";
