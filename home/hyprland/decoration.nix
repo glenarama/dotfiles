@@ -20,7 +20,7 @@
     }
 
     master {
-        new_is_master = true
+        new_status = master
         allow_small_split = true
         special_scale_factor = 1
         mfact = 0.5
