@@ -112,10 +112,6 @@
     enable = true;
     xwayland.enable = true;
   };
-  hardware = {
-    graphics.enable = true;
-    nvidia.modesetting.enable = true;
-  };
   system.stateVersion = "24.05";
 
   nix.gc = {
