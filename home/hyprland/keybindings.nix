@@ -18,7 +18,7 @@
       "$mod, RETURN, exec, alacritty"
       "$mod, K, exec, kitty"
       "$mod, Q, killactive"
-      "$mod, B, exec, google-chrome-stable"
+      "$mod, B, exec, firefox"
       "$mod, E, exec, nemo"
       "$mod, F, fullscreen"
       "$mod, T, togglefloating"
@@ -28,6 +28,7 @@
       "$mod SHIFT, T, exec, hyprctl dispatch workspaceopt allfloat"
       "$mod, W, exec, waypaper"
       "$mod, SPACE, exec, ulauncher --no-window-shadow"
+      "$mod, A, exec, albert show"
       "$mod, Escape, exec, wlogout -b 2"
 
       # Window Management

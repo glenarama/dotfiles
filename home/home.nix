@@ -9,14 +9,12 @@
   home.packages = with pkgs; [
     bun
     firefox
-    chromium
     google-chrome
     nerdfonts
     killall
     cinnamon.nemo
     lm_sensors
     imagemagick
-    neofetch
     glib
     zed-editor
     gifski
