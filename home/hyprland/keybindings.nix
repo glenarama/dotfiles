@@ -18,7 +18,7 @@
       "$mod, RETURN, exec, alacritty"
       "$mod, K, exec, kitty"
       "$mod, Q, killactive"
-      "$mod, B, exec, chromium-browser"
+      "$mod, B, exec, google-chrome-stable"
       "$mod, E, exec, nemo"
       "$mod, F, fullscreen"
       "$mod, T, togglefloating"

@@ -20,6 +20,7 @@
     glib
     zed-editor
     gifski
+    vulkan-tools 
   ];
 
   nixpkgs.config = {

@@ -17,6 +17,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.consoleMode = "max";
   boot.supportedFilesystems = [ "ntfs" ];
+  boot.kernelParams = [ "nvidia-drm.fbdev=1" ];
   boot.loader.systemd-boot.configurationLimit = 3;
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

@@ -6,7 +6,7 @@
     source = ./colors.conf
 
     general {
-      layout = hy3
+      layout = master
       resize_on_border = true
       gaps_in = 6
       gaps_out = 10
