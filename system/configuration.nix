@@ -112,7 +112,6 @@
     enable = true;
     xwayland.enable = true;
   };
-  system.stateVersion = "24.05";
 
   nix.gc = {
     automatic = true;
