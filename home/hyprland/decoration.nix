@@ -3,7 +3,7 @@
 {
 
   wayland.windowManager.hyprland.extraConfig = ''
-    source = ./colors.conf
+    #source = ./colors.conf
 
     general {
       layout = master

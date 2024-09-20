@@ -12,13 +12,14 @@
     google-chrome
     nerdfonts
     killall
-    cinnamon.nemo
+    nemo
     lm_sensors
     imagemagick
     glib
     zed-editor
     gifski
     albert
+    neofetch
   ];
 
   nixpkgs.config = {
