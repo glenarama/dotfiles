@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
     ];
 
-  system.stateVersion = "25.05"; # Please read the comment before changing.
+  system.stateVersion = "24.05"; # Please read the comment before changing.
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

@@ -4,8 +4,7 @@
     enable = true;
     settings = {
         monitor=[
-        "DP-1,3440x1440,auto,1"
-        #"Unknown-1,disable"
+        "DP-1,3440x1440,auto,auto"
       ];
     };
   };
