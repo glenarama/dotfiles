@@ -8,7 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./nvidia.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -17,7 +16,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.consoleMode = "max";
   boot.supportedFilesystems = [ "ntfs" ];
-  boot.kernelParams = [ "nvidia-drm.fbdev=1" ];
   boot.loader.systemd-boot.configurationLimit = 3;
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -29,9 +27,18 @@
   # Enable networking
   networking.networkmanager.enable = true;
   services.blueman.enable = true;
-  hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
-
+  hardware.bluetooth = {
+    enable = true;
+    settings = {
+      General = {
+        Experimental = "true";
+      };
+      Policy = {
+        AutoEnable = "true";
+      };
+    };
+  };
   # Set your time zone.
   time.timeZone = "Europe/London";
 
@@ -70,6 +77,9 @@
   services.displayManager.sddm.wayland.enable = true;
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "glen";
+  services.desktopManager.cosmic.enable = true;
+  services.displayManager.cosmic-greeter.enable = true;
+  services.flatpak.enable = true;
   services.displayManager.sddm = {
     enable = true;
     settings = {

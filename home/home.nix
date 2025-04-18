@@ -18,8 +18,8 @@
     glib
     zed-editor
     gifski
-    albert
     neofetch
+    cmatrix
   ];
 
   nixpkgs.config = {
