@@ -113,7 +113,8 @@
    git
    egl-wayland
    wget
-   nerdfonts
+   nerd-fonts.geist-mono
+   nerd-fonts.jetbrains-mono
   ];
   programs.zsh.enable = true;
   programs.hyprland = {

@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  nixpkgs.config.allowUnfree = true;
   home.username = "glen";
   home.homeDirectory = "/home/glen";
   home.stateVersion = "24.05"; # Please read the comment before changing.
@@ -10,7 +9,8 @@
     bun
     firefox
     google-chrome
-    nerdfonts
+    nerd-fonts.geist-mono
+    nerd-fonts.jetbrains-mono
     killall
     nemo
     lm_sensors
